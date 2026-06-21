@@ -1,0 +1,19 @@
+-- Steel Trade Intelligence Platform — Reference Schema
+-- Full DDL to be implemented in migrations during Phase 0/1.
+--
+-- Domains:
+--   - Identity & Tenancy (organizations, users)
+--   - Geography (countries, ports, locations)
+--   - Parties (suppliers, customers, contacts)
+--   - Products (steel_grades, product_specifications)
+--   - Trade (supply_listings, demand_requests)
+--   - Matching (match_runs, match_results, match_weights)
+--   - Competitors (competitors, competitor_snapshots, competitor_overlaps)
+--   - Freight (freight_lanes, freight_quotes, freight_market_indices)
+--   - Import (import_jobs, import_row_errors)
+--   - Audit (audit_logs)
+
+-- Extensions required:
+-- CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+-- CREATE EXTENSION IF NOT EXISTS "postgis";
+-- CREATE EXTENSION IF NOT EXISTS "pg_trgm";

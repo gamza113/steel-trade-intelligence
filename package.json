@@ -1,0 +1,29 @@
+{
+  "name": "steel-trade-intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Steel Trade Intelligence Platform — worldwide steel supplier and customer management",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @stip/api --filter @stip/web dev",
+    "dev:web": "pnpm --filter @stip/web dev",
+    "dev:api": "pnpm --filter @stip/api dev",
+    "db:migrate": "bash ./scripts/migrate.sh",
+    "db:seed": "bash ./scripts/seed-dev.sh",
+    "db:setup": "bash ./scripts/migrate.sh && bash ./scripts/seed-dev.sh",
+    "db:backfill-dimensions": "node ./scripts/backfill-dimension-options.mjs",
+    "build": "pnpm run build:packages && pnpm --filter @stip/api --filter @stip/web build",
+    "build:packages": "pnpm --filter @stip/shared-types --filter @stip/validation build",
+    "build:api": "pnpm run build:packages && pnpm --filter @stip/api build",
+    "build:web": "pnpm --filter @stip/shared-types build && pnpm --filter @stip/web build",
+    "start:api": "pnpm --filter @stip/api start",
+    "build:check": "pnpm run build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

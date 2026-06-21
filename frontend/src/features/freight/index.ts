@@ -1,0 +1,1 @@
+export { FreightPage } from "./FreightPage";

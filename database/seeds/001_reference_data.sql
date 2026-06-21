@@ -1,0 +1,2 @@
+-- Seed data: countries, ports, steel grades (reference data)
+-- To be implemented during Phase 0/1
