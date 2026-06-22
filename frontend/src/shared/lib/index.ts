@@ -1,4 +1,4 @@
-export { apiFetch, ApiError, getApiBaseUrl } from "./api";
+export { apiFetch, apiUpload, ApiError, buildApiUrl, getApiBaseUrl } from "./api";
 export { fetchAllCompanies } from "./companiesApi";
 export type { CompanyListFilters } from "./companiesApi";
 export { importExcelMaster } from "./importsApi";
